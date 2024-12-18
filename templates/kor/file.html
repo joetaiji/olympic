@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<style>
+*{box-sizing:border-box;}
+body {margin:0; padding:30px; font-family:'맑은 고딕'; font-size:12px; color:#333; line-height:1.5;}
+i{font-style: normal;border-radius: 3px;padding:2px 4px;color:#fff;font-weight: bold;font-size: 10px;line-height: 1;margin-left: 5px;margin-right:5px;display: inline-block;}
+.xi-check{color:#ff3300;font-weight:bold;}
+.new{margin-right: 20px;position: relative;}
+.new::after{content:"N"; background-color:#bb05e8;border-radius: 3px;padding:2px 4px;color:#fff;font-weight: bold;font-size: 10px;line-height: 1.2;display: inline-block;position: absolute;right: -20px;}
+.del,
+.del:hover{text-decoration: line-through;cursor:default;}
+
+em {display: inline-block;background-color: #888;color: #fff;border-radius: 3px;padding:0px 3px;font-style: normal;font-size: 11px;margin-left: 5px;}
+em + em{background-color: #555;margin-left: 5px;}
+em + em + em{background-color: #333;}
+em + em + em + em{background-color: #000;}
+
+a{color:inherit;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+.info{border: 1px solid #ddd;background: #f5f5f5;padding: 1rem;margin-bottom: 2rem;}
+
+.nav{border-top:3px solid #333;border-bottom:3px solid #333;}
+.type{background-color:#889;display: block;font-weight:bold;font-size:14px;text-align:center;display:block;float:none;width:100%;color:#fff;}
+.nav ul{margin:0;padding:0;list-style:none;}
+.topmenu{padding:0;}
+.topmenu .title_area{display: none;}
+.topmenu a{ padding:5px;}
+.topmenu a + ul{}
+.topmenu small{color:#f3a600;font-size: 12px;}
+.topmenu li{display: flex;padding:5px;}
+.topmenu li~li{border-top:1px solid #ddd;}
+.topmenu li::after{content:"";display:block;clear:both;}
+.topmenu .depth1{background-color:#f1f1f5;}
+.topmenu .depth1>a{font-weight: bold;flex:1 1 20%; max-width:20%;}
+.topmenu .depth1>a + .submenu{background-color:#fff;flex:1 1 80%; max-width:80%;}
+.topmenu .depth2>li>a{flex:1 1 20%; max-width:20%;background:#f9f9fc;}
+.topmenu .depth2>li>a + .depth3{flex:1 1 80%; max-width:80%;border-left:1px solid #eee;font-size:11px;}
+.topmenu .nodata{background-color:#f8f8f8;color:#ccc;}
+
+@media screen and (max-width:767px){
+	body{padding:10px;}
+	.topmenu a{max-width:100%!important;display:block;}
+	.topmenu a + ul,
+	.topmenu .depth1>a + .submenu{max-width:100%!important;}
+	.topmenu li{display: block;}
+	.topmenu .depth3{border-top:1px solid #f6f6f6;}
+	.topmenu .depth3 li{margin-left:15px;}
+}
+</style>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+<script>
+$(document).ready(function(){
+	$("title").text($("h1").text());
+	$(".topmenu a").each(function(){
+		$(this).append(" <small> " + $(this).attr("href") + "</small>");		
+	});
+    var max= Math.max.apply([], $('[data-day]').map(function() {
+        return $(this).data('day');
+    }).get());
+
+    $("em").each(function(){    
+        var day = $(this).data("day");  
+        $(this).prepend(day);
+        if(max == day){
+            $(this).addClass('new');   
+        }
+    });   
+     
+});
+</script>
+</head>
+<body>
+<h1>파일리스트 - 올림픽공원</h1>
+<div class="info">	
+	<p>2021.11.04 - JYC</p>
+	<p>작업완료일<em data-day="월/일"></em>수정2<em data-day="월/일"></em>수정3<em data-day="월/일"></em>수정4<em data-day="월/일" class="new"></em></p>
+</div>
+<nav class="nav" id="gnb">
+	<h2 class="type">레이아웃</h2>
+	<ul id="head_menu" class="topmenu">
+		<li class="depth1"><a href="index.html">메인<em data-day="11/09"></em></a></li>
+		<li class="depth1"><a href="sub_layout.html">서브<em data-day="11/22"></em></a></li> 
+	</ul>
+
+	<h2 class="type">콘텐츠-작업전</h2>
+	<ul id="head_menu" class="topmenu">
+		<li class="depth1">
+			<a href="s1_01.html"><span>공원가이드</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">공원가이드</h3>
+					<em lang="en">Park Guide </em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s1_01.html">공원이용정보<em data-day="12/06"></em></a></li>
+					<li><a href="">공원안내도(안내도팝업)</a> </li>
+					<li><a href="https://olympicpark.kspo.or.kr:441/jsp/homepage/contents/cyber_tour/index.html">공원사이버투어(새창링크)</a> </li>
+					<li><a href="s1_04.html">놀이시설</a>
+						<ul class="depth3">
+							<li><a href="s1_04.html">호돌이열차<em data-day="12/07"></em><em data-day="1/12">탭영역수정</em></a></li>
+							<li><a href="s1_04_02.html">자전거대여<em data-day="12/14"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="s1_05.html">체육시설<em data-day="12/14"></em><em data-day="1/12">수정</em></a> </li>
+					<li><a href="s1_06.html">편의시설</a>
+						<ul class="depth3">
+							<li><a href="s1_06.html">공원이용시설<em data-day="12/14"></em></a></li>
+							<li><a href="s1_06_02.html">공원편의시설<em data-day="12/15"></em></a></li>							
+							<li><a href="">편의시설 위치찾기(안내도팝업)</a></li>
+						</ul>
+					</li>
+					<li><a href="s1_07.html">올림픽공원9경</a>
+						<ul class="depth3">
+							<li><a href="s1_07.html">올림픽공원9경<em data-day="12/15"></em></a></li>
+							<li><a href="s1_07_02.html">9경 스탬프 투어<em data-day="12/16"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="s1_08.html">사랑나무연리목<em data-day="12/16"></em></a> </li>
+					<li><a href="s1_09.html">교통 및 주차안내<em data-day="1/18"></em></a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="s2_01.html"><span>체육공간</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">체육공간</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s2_01.html">스포츠교실</a>
+						<ul class="depth3">
+							<li><a href="s2_01.html">올림픽스포츠센터<em data-day="12/16"></em><em data-day="1/12">수정</em></a></li>
+							<li><a href="s2_01_02.html">올림픽수영장<em data-day="12/16"></em><em data-day="1/12">수정</em></a></li>
+						</ul>
+					</li>
+					<li><a href="s2_02.html">산책/조깅코스<em data-day="1/11"></em><em data-day="1/12">수정</em></a></li>
+					<li><a href="s2_03.html">생활건강시설<em data-day="1/11"></em></a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="s3_01.html"><span>문화공간</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">문화공간</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s3_01.html">조이올팍 공연/행사안내</a>
+						<ul class="depth3">
+							<li><a href="s3_01.html">일정안내<em data-day="1/19"></em></a>
+								
+								<ul class="depth4">
+									<li><a href="s3_01_text.html">일정안내-텍스트보기<em data-day="1/19"></em></a></li>
+									<li><a href="s3_01_calendar.html">일정안내-캘린더보기(1월9일 행사 오버시 팝업)<em data-day="1/19"></em></a></li>
+									<li><a href="s3_01_view.html">일정안내-상세보기<em data-day="1/20"></em></a></li>
+								</ul>
+							</li>
+							
+							<li><a href="s3_01_02.html">예매안내<em data-day="1/20"></em></a> </li>
+							<li><a href="">공연장안내</a>
+								<ul class="depth4">
+									<li><a href="s3_01_03.html">KSPO-DOME<em data-day="1/21"></em></a></li>									
+									<li><a href="s3_01_03_02.html">SK핸드볼경기장<em data-day="1/21"></em></a></li>									
+									<li><a href="s3_01_03_03.html">올림픽홀<em data-day="1/24"></em></a></li>									
+									<li><a href="s3_01_03_04.html">우리금융아트홀<em data-day="1/24"></em></a></li>									
+									<li><a href="s3_01_03_05.html">K-아트홀<em data-day="1/24"></em></a></li>									
+									<li><a href="s3_01_03_06.html">뮤즈라이브<em data-day="1/24"></em></a></li>									
+									<li><a href="s3_01_03_07.html">기타시설<em data-day="1/24"></em></a></li>									
+								</ul>
+							</li>
+							<li><a href="s3_01_04.html">좌석배치안내<em data-day="1/24"></em></a> </li>
+							<li><a href="https://www.ksponco.or.kr/jsp/homepage/contents/business/rentalprocess_10.do">시설대관(새창링크)</a> </li>
+							<li><a href="s3_01_06.html">공연포스터 전시관</a></li>
+						</ul>
+					</li>
+					<li><a href="http://edu.ksponco.or.kr/">올림픽홀 평생교육원(새창링크)</a> </li>
+					<li><a href="">문화/예술시설</a>
+						<ul class="depth3">
+							<li><a href="s3_03.html">서울올림픽기념관<em data-day="1/24"></em></a></li>
+							<li><a href="s3_03_02.html">소마미술관<em data-day="1/24"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="s3_04.html">조각작품갤러리</a>
+						<ul class="depth3">
+							<li><a href="s3_04.html">조각공원 안내<em data-day="1/24"></em></a></li>
+							<li><a href="https://soma.kspo.or.kr/piece/product/list" target="_blank">조각공원 맵(새창링크)</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="s4_01.html"><span>생태공간</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">생태공간</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s4_01.html">생태공원소개<em data-day="1/12"></em></a></li>
+					<li><a href="s4_02.html">잔디시설안내<em data-day="1/14"></em></a></li>
+					<li><a href="s4_03.html">장미광장</a>
+						<ul class="depth3">
+							<li><a href="s4_03.html">장미광장소개<em data-day="1/14"></em></a></li>
+							<li><a href="s4_03_02.html">장미광장현황<em data-day="1/14"></em></a></li>
+							<li><a href="s4_03_03.html">장미관람안내<em data-day="1/14"></em></a></li>
+							<li><a href="s4_03_04.html">둘러보기</a>
+								<ul class="depth4">									
+									<li><a href="s4_03_04.html">장미화단안내<em data-day="1/17"></em></a></li>
+									<li><a href="s4_03_04_02.html">시설안내<em data-day="1/17"></em></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="s4_04.html">생태공원 갤러리<em data-day="1/14"></em></a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href=""><span>역사공간</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">역사공간</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="">올팍조성과 운영</a>
+						<ul class="depth3">
+							<li><a href="s5_01.html">공원조성배경<em data-day="1/17"></em></a></li>
+							<li><a href="s5_01_02.html">비전과 미래<em data-day="1/17"></em></a></li>
+							<li><a href="s5_01_03.html">평화의성지 올팍<em data-day="1/17"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="s5_02.html">몽촌역사이야기<em data-day="1/17"></em></a></li>
+					<li><a href="">주변유적지안내</a>
+						<ul class="depth3">
+							<li><a href="s5_03.html">한성백제박물관<em data-day="1/17"></em></a></li>
+							<li><a href="s5_03_02.html">몽촌역사관<em data-day="1/17"></em></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="s6_01.html"><span>알림·홍보</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">알림·홍보</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s6_01.html">올팍소식<em data-day="1/17"></em></a></li>
+					<li><a href="s6_02.html">보도자료<em data-day="1/17"></em></a></li>
+					<li><a href="s6_03.html">홍보동영상<em data-day="1/17"></em></a> </li>
+					<li><a href="s6_04.html">포토갤러리<em data-day="1/17"></em></a> </li>
+					<li><a href="s6_05.html">PI소개<em data-day="1/18"></em></a> </li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="s7_01.html"><span>고객센터</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">고객센터</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s7_01.html">자주하는 질문<em data-day="1/18"></em></a></li>
+					<li><a href="s7_02.html">고객의 소리<em data-day="1/18"></em></a>
+						<ul class="depth3">
+							<li><a href="s7_02_view.html">고객의 소리 뷰<em data-day="1/18"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="s7_03.html">전자민원<em data-day="1/18"></em></a> </li>
+					<li><a href="http://www.kspo.or.kr/kspo/main/contents.do?menuNo=200242" target="_blank">정책제안(새창링크)</a> </li>
+					<li><a href="s7_05.html">제휴제안<em data-day="1/18"></em></a>
+						<ul class="depth3">
+							<li><a href="s7_05_form.html">제휴제안 쓰기<em data-day="1/19"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="http://www.kspo.or.kr/kspo/main/contents.do?menuNo=200258" target="_blank">고객참여 예산제도(새창링크)</a> </li>
+					<li><a href="s7_07.html">고객이용후기<em data-day="1/18"></em></a>
+						<ul class="depth3">
+							<li><a href="s7_07_view.html">고객이용후기 뷰<em data-day="1/18"></em></a></li>
+						</ul>
+					</li>
+					<li><a href="s7_08.html">유실물센터<em data-day="1/18"></em></a> </li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="s8_01.html"><span>MY페이지</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">MY페이지</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s8_01.html">MYPAGE 회원정보</a></li>
+					<li><a href="s8_02.html">회원정보수정</a></li>
+					<li><a href="s8_03.html">고객의소리</a></li>
+					<li><a href="s8_04.html">올림픽공원</a>
+						<ul class="depth3">
+							<li><a href="s8_04.html">공연예매내역</a></li>
+							<li><a href="s8_04_02.html">조이올팍 회원카드</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="depth1">
+			<a href="etc_01.html"><span>기타</span></a>
+			<div class="submenu">
+				<div class="title_area">
+					<h3 class="title">기타</h3>
+					<em lang="en">Eng</em>
+				</div>
+				<ul class="depth2">
+					<li><a href="s9_01.html">회원이용약관</a></li>
+					<li><a href="s9_02.html">개인정보처리방침</a></li>
+					<li><a href="s9_03.html">고객서비스헌장<em data-day="2/16"></em></a> </li>
+					<li><a href="s9_04.html">조이올팍회원 서비스<em data-day="2/15"></em></a> </li>
+					<li><a href="s9_05.html">올림픽공원 APP소개<em data-day="2/15"></em></a> </li>
+					<li><a href="s9_06.html">KSPO소개<em data-day="2/15"></em></a> </li>
+				</ul>
+			</div>
+		</li>
+	</ul>  
+</nav>
+</body>
+</html>

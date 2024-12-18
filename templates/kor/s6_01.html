@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>올림픽공원</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="description" content="페이지 설명">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../resources/img/common/apple-touch-icon-57x57.png">
+	<link rel="icon" type="image/png" href="../../resources/img/common/favicon-16x16.png" sizes="16x16">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/webfonts.css">
+	<link rel="stylesheet" href="../../resources/css/layout.css">
+	<link rel="stylesheet" href="../../resources/css/sub.css">
+	<script src="../../resources/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/jquery/slick.min.js"></script>
+	<script src="../../resources/js/func.min.js"></script>
+	<script src="../../resources/js/common.js"></script>
+	<script src="../../resources/js/sub.js"></script>
+</head>
+
+<body>
+	
+		
+
+			<div class="sub_visual sub6">				
+				<div class="container">
+					<h2 class="title">알림·홍보</h2>					
+				</div>
+			</div><!-- //sub_visual-->
+
+			<div class="snb_content_wrap container">
+				<section id="snb" class="snb_section">
+					<div class="snb">
+						<h2 class="title">알림·홍보</h2>
+						<nav class="nav">
+							<ul class="depth2">
+								<li class="active"><a href="s6_01.html">올팍소식</a></li>
+								<li><a href="s6_02.html">보도자료</a></li>
+								<li><a href="s6_03.html">홍보동영상</a> </li>
+								<li><a href="s6_04.html">포토갤러리</a> </li>
+								<li><a href="s6_05.html">PI소개</a> </li>
+							</ul>
+						</nav>
+					</div>	
+				</section>
+				<!-- //snb -->
+
+				<div id="content" class="content_section">
+					<h3 class="title_h1">올팍소식</h3>
+
+
+					<!-- //콘텐츠시작 -->
+					<!-- //board 시작 -->
+					<div class="board">		
+						<div class="board_info">
+							<div class="page_info">
+								<span class="total_page">전체<strong>3건</strong></span>
+								<span class="current_page">현재 페이지<strong>1/10</strong></span>
+							</div>
+							<form class="board_search">
+								<fieldset class="form-row">
+									<legend class="sr-only">게시글 검색</legend>
+									<select class="search_type form-select mr20" title="검색분류선택">
+										<option value="all">전체</option>
+										<option value="title">제목</option>
+										<option value="regNm">등록자</option>
+										<option value="regDttm">등록일자</option>
+									</select>
+									<input type="text" class="input_keyword form-control" placeholder="검색어를 입력하세요." title="검색어를 입력하세요.">
+									<button type="submit" class="search_btn"><span class="sr-only">검색</span></button>
+								</fieldset>
+							</form>
+						</div>
+						<!-- //board_info -->
+
+						<div class="board_list simple">
+							<table>
+								<caption>공지사항 - 번호, 제목, 첨부파일, 등록일, 조회수</caption>
+								<colgroup>
+								<col class="w5">
+								<col>
+								<col class="w8">
+								<col class="w10">
+								<col class="w8">
+								</colgroup>
+								<thead class="dhead">
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col" class="title">제목</th>
+									<th scope="col">첨부파일</th>
+									<th scope="col">등록일</th>
+									<th scope="col">조회수</th>
+								</tr>
+								</thead>
+								<tbody class="dbody" id="listView">
+								<tr class="notice">
+									<td><i class="icon_notice">공지</i></td>
+									<td class="title"><a href="table_view.html">국립검역소, 국민참여 조직진단 실시</a></td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">651</td>
+								</tr>
+								<tr class="notice">
+									<td><i class="icon_notice">공지</i></td>
+									<td class="title"><a href="table_view.html">국내 A형간염 환자 증가</a></td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">1568</td>
+								</tr>
+								<tr>
+									<td >3417</td>
+									<td class="title" data-title="타이틀">
+									<a href="table_view.html">봄철, 어린이 보행자 교통사고 발생 주의하세요!<i class="xi-new"></i><span class="sr-only">새글</span></a></td>
+									<td class="file" data-title="첨부파일"></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">33</td>
+								</tr>
+								<tr>
+									<td>3416</td>
+									<td class="title"><a href="table_view.html">국립검역소, 국민참여 조직진단 실시</a></td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">456</td>
+								</tr>
+								<tr>
+									<td>3415</td>
+									<td class="title"><a href="table_view.html">국립줄기세포재생센터 제조시설 활용 신청 절차 변경 안내</a></td>
+									<td class="file" data-title="첨부파일"></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">1</td>
+								</tr>
+								<tr>
+									<td>3414</td>
+									<td class="title"><a href="table_view.html">국내 만성 B형간염 다약제 내성 환자에 효과적인 치료의 길 열려</a></td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">19</td>
+								</tr>
+								<tr>
+									<td>3413</td>
+									<td class="title"><i class="xi-lock"></i><span class="sr-only">비밀글</span><a href="table_view.html">신학기
+										학교생활 시작, 인플루엔자·홍역·수두 등 감염병 주의 당부</a></td>
+									<td class="file" data-title="첨부파일"></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">116</td>
+								</tr>
+								<tr>
+									<td>3412</td>
+									<td class="title"><i class="xi-subdirectory-arrow"><span class="sr-only">답글</span></i><a href="table_view.html">봄철, 어린이 보행자 교통사고 발생 주의하세요!</a></td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">32</td>
+								</tr>
+								<tr>
+									<td>3411</td>
+									<td class="title"><a href="table_view.html">국내 만성 B형간염 다약제 내성 환자에 효과적인 치료의 길 열려</a></td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">1567</td>
+								</tr>
+								<tr>
+									<td>3410</td>
+									<td class="title"><a href="table_view.html">신학기 학교생활 시작, 인플루엔자·홍역·수두 등 감염병 주의 당부</a>
+									</td>
+									<td class="file" data-title="첨부파일"><a href="" class="link"><i class="icon_download"></i><span class="sr-only">첨부파일</span></a></td>
+									<td data-title="등록일">2019/03/08</td>
+									<td data-title="조회수">356</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //board_list -->
+
+						<div class="paging">
+							<a href="" class="page_first"><i aria-hidden="true"></i><span class="sr_only">첫페이지</span></a>
+							<a href="" class="page_prev"><i aria-hidden="true"></i><span class="sr_only">이전페이지</span></a>
+							<a href="" class="page_none page_now"><strong>1</strong></a>
+							<a href="" class="page_none">2</a>
+							<a href="" class="page_next"><i aria-hidden="true"></i><span class="sr_only">다음페이지</span></a>
+							<a href="" class="page_last"><i aria-hidden="true"></i><span class="sr_only">마지막페이지</span></a>
+						</div>
+						<!-- //paging -->
+
+					</div>
+					<!-- //board 끝 -->
+					
+				
+					<!-- //콘텐츠 끝 -->
+
+					
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //snb_content_wrap -->
+		
+
+</body>
+
+</html>
